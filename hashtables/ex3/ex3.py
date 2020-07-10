@@ -21,9 +21,6 @@ And we need to compute the intersection, that is, numbers that exist in all list
 """
 
 
-
-
-
 def intersection(arrays):
     """
     YOUR CODE HERE
