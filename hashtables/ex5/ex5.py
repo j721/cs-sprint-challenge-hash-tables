@@ -27,6 +27,29 @@ def finder(files, queries):
     """
     # Your code here
 
+    #create empty hash table
+    hash = {}
+
+    #traverse through individual files in the files list
+    for i in files:
+        #separate the file paths by "/"
+        array = i.split("/")  
+        #checking element in the individual file paths      
+        for element in array:
+            #if not found return empty array
+            if element not in hash:
+                hash[element] = []
+            #else add it into the hash table
+            hash[element].append(i)
+
+    result = []
+
+    #traverse individual files through queries
+    for x in queries:
+        #if file found in hash table then add it into the result array
+        if x in hash:
+            result.extend(hash[x]) #extend() method adds all the elements of an iterable (list, tuple, string etc.) to the end of the list.
+
     return result
 
 
