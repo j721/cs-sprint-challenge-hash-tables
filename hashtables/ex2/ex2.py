@@ -51,14 +51,3 @@ def reconstruct_trip(tickets, length):
 
     return route
 
-# cache={}
-
-# for e in tickets:
-#         cache[e.source] = e.destination
-    
-#     pointer = cache["NONE"]
-#     route = [pointer]
-
-#     while cache[pointer] != 'NONE':
-#         route.append(cache[pointer])
-#         pointer = cache[pointer]
