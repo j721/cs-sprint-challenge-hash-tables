@@ -20,8 +20,6 @@ Solve this problem with a hash table.
 
 """
 
-# cache = {}
-
 def has_negatives(a):
     """
     YOUR CODE HERE
@@ -40,30 +38,6 @@ def has_negatives(a):
         if interger !=0 and -interger in cache:
             #add the absolute value of the interger into the result array
             result.append(abs(interger))
-
-
-
-    # for interger in a:
-    #     if interger == 0:
-    #         pass
-    #     #if negative integer in cache add it
-    #     if -interger in cache:
-    #         cache[-interger] +=1
-    
-    # result = []
-
-    # # each interger in the cache that contains a key-value pair
-    # for e in cache.items():
-    #    #if the 2nd element in the array equals 2
-    #     if e[1] ==2:
-    #        #if first element in the array is less than 0, meaning is negative
-    #         if e[0] < 0:
-    #              #add that to the result array     
-    #             result.append(-e[0])
-    #          #else if the first element is greater than zero. A positive integer then add it to the result array
-    #         else:
-    #             result.append(e[0])
-
 
     return result
 
