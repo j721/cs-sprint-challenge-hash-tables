@@ -17,9 +17,6 @@ by checking the hash table for the i-1th location.
 
 """
 
-
-
-
 #  Hint:  You may not need all of these.  Remove the unused functions.
 class Ticket:
     def __init__(self, source, destination):
@@ -32,7 +29,7 @@ def reconstruct_trip(tickets, length):
     """
     # Your code here
     cache = {}
-    route = []
+    route = []  
 
    #traverse through tickets lists
     for ticket in tickets:
@@ -53,3 +50,15 @@ def reconstruct_trip(tickets, length):
 
 
     return route
+
+# cache={}
+
+# for e in tickets:
+#         cache[e.source] = e.destination
+    
+#     pointer = cache["NONE"]
+#     route = [pointer]
+
+#     while cache[pointer] != 'NONE':
+#         route.append(cache[pointer])
+#         pointer = cache[pointer]
