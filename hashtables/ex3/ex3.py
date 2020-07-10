@@ -31,20 +31,36 @@ def intersection(arrays):
     cache ={}
 
     #loop through the individual array inside of the larger array
-    for array in arrays:
-        #check for element in the individual array
-        for i in array:
-            #if element is in the cache then increment +=1
-            if i in cache:
-                cache[i] +=1
-            #else element not in cache set the value to be 1
-            else:
-                cache[i] = 1
+    # for array in arrays:
+    #     #check for element in the individual array
+    #     for i in array:
+    #         #if element is in the cache then increment +=1
+    #         if i in cache:
+    #             cache[i] +=1
+    #         #else element not in cache set the value to be 1
+    #         else:
+    #             cache[i] = 1
                 
-    #for each value in the cache starting the traversal from the first index
-    #if the value is equal to the length of the larger arrays 
-    # then return the result in the form of an array
-    result = [value[0] for value in cache.items() if value[1] == len(arrays)]
+    # #for each value in the cache starting the traversal from the first index
+    # #if the value is equal to the length of the larger arrays 
+    # # then return the result in the form of an array
+    # result = [value[0] for value in cache.items() if value[1] == len(arrays)]
+
+    for arr in arrays:
+        for i in arr:
+            #if no value found in cache have it default to value of 1
+            if i not in cache:
+                cache[i] = 1
+            #else if value is found then increment it by +1    
+            else:
+                cache[i] +=1
+    result = []
+
+    for interger in list(cache):
+        #if the interger is equal to the length of the arrays then add it into the result array
+        #if the cache == number of arrays in the list then it intersects
+        if cache[interger] ==len(arrays):
+            result.append(int(interger))
 
     return result
 

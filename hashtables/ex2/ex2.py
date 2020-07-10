@@ -37,7 +37,7 @@ def reconstruct_trip(tickets, length):
         cache[ticket.source] = ticket.destination
     #route set to default NONE
     route.append(cache['NONE'])
-    #index element loop through length of the reconstruct_trip
+    #index element loop through length of the cache
     for i in range(length):
         #if we have a route found in the cache
         if route[i] in cache:
