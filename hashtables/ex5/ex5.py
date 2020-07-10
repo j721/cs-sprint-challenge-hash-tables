@@ -34,7 +34,7 @@ def finder(files, queries):
     for i in files:
         #separate the file paths by "/"
         array = i.split("/")  
-        #checking element in the individual file paths      
+        #checking file name in the individual file paths      
         for element in array:
             #if not found return empty array
             if element not in hash:
