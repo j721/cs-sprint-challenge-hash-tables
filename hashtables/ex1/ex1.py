@@ -37,6 +37,28 @@ def get_indices_of_item_weights(weights, length, limit):
     """
     # Your code here
 
+    #create empty cache
+    cache = {}
+    #traverse through the length of the weights array
+    for i in range(length):
+        #subtracting the interger at current index from the weight limit
+        value = limit - weights[i]
+        #check if value is in the cache
+        if value in cache:
+            #assign that value to the subtract variable
+            substracted = cache[value]
+            #create a new arr with the updated values
+            #containing the index, and the subtracted value
+            new_arr = [i, substracted]
+            #sort the list using reverse to have the largest number be set at the 0th index
+            new_arr.sort(reverse = True)
 
+            return new_arr
 
+        else:
+            #else if value not found in cache
+            #grab the index value from the weights array and add it to the cache 
+            cache[weights[i]] = i
+
+    #else there are no values in the weights array return None
     return None
